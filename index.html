@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <a href="./assets/meu_curriculo.pdf" download class="meu-cv"></a>
+    <title>Portfólio | Riquelme Braga - Desenvolvedor</title>
+  </head>
+  <body>
+    <nav class="navegacao">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos em Destaque</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+        <a href="./assets/meu_curriculo.pdf" target="_blank">Currículo</a>
+      </ul>
+      <div class="toggle-tema">
+        <input type="checkbox" id="theme-toggle" class="checkbox-tema" />
+        <label for="theme-toggle" class="label-tema">
+          <span class="toggle-bolinha"></span>
+        </label>
+      </div>
+    </nav>
+
+    <main id="inicio" class="cabeçalho">
+      <div>
+        <img
+          src="./img/fotominhaimg.jpeg"
+          class="foto-perfil"
+          alt="Foto de Riquelme Braga"
+        />
+        <h1>Riquelme Braga</h1>
+        <p>Desenvolvedor Junior</p>
+      </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+      <h2 class="sobre-titulo">Sobre mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Sou um estudante de Análise e Desenvolvimento de Sistemas e
+          Desenvolvedor Full Stack, apaixonado por arquitetura de software e
+          qualidade de código. Tenho experiência prática na criação de sistemas
+          web corporativos, com foco em segurança, integridade de dados e
+          interfaces dinâmicas. Minha stack principal envolve Python e FastAPI
+          no backend, React e TypeScript no frontend, além de um forte domínio
+          de Docker e ambientes Linux para infraestrutura e DevOps. Gosto de
+          resolver desafios de arquitetura, como implementar notificações
+          assíncronas e estruturar casos de teste precisos. Sou movido pelo
+          desafio de transformar regras de negócio complexas em aplicações
+          rápidas, limpas e altamente funcionais.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <h2 class="projetos-titulos">Meu projeto em Destaque</h2>
+      <p class="projetos-paragrafo">
+        Desenvolvimento e sustentação de um sistema seguro, auditável e de alta
+        performance para a gestão de eleições corporativas da Infra S.A. A
+        plataforma garante o sigilo do voto, a integridade do processo
+        democrático interno e a aplicação de regras complexas de legislação
+        trabalhista. Stack Tecnológico: Python, FastAPI, React, TypeScript,
+        SQLAlchemy, Docker.
+      </p>
+      <div class="projetos-caixa">
+        <div class="projetos-card">
+          <img
+            src="./img/login.png"
+            alt="Tela de Login e Segurança JWT"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">Autenticação Segura e JWT</h3>
+          <p class="paragrafos-projetos">
+            Integração segura com credenciais corporativas (LDAP). O backend
+            extrai a identidade do eleitor diretamente do payload do token JWT,
+            garantindo a regra de "um utilizador, um voto" sem quebrar o sigilo
+            do voto criptografado.
+          </p>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="./img/criacao.png"
+            alt="Formulário de criação de eleição"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">Visão do Administrador (CRUD)</h3>
+          <p class="paragrafos-projetos">
+            A API em FastAPI gerencia dinamicamente formulários e regras de
+            negócio complexas. O painel controla rigorosamente o ciclo de vida
+            da urna (Criada, Publicada, Finalizada), adaptando-se a pleitos como
+            CIPA e CONSAD.
+          </p>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="./img/votar.png"
+            alt="Cédula de Votação"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">UX Simples e Intuitiva</h3>
+          <p class="paragrafos-projetos">
+            Interface em React projetada para ser acessível e à prova de falhas
+            para o usuário final. Permite o registro rápido da escolha de
+            candidatos ou chapas, processando também opções legais como Voto em
+            Branco e Nulo nativamente.
+          </p>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="./img/regras.png"
+            alt="Alertas de regras do sistema"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">Blindagem e Tratamento de Erros</h3>
+          <p class="paragrafos-projetos">
+            O frontend trata exceções de forma clara, exibindo alertas imediatos
+            que bloqueiam requisições inválidas na UI. O sistema impede ações
+            fora do prazo eleitoral ou tentativas de votos duplicados.
+          </p>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="./img/resultados.png"
+            alt="Painel de Apuração"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">Apuração em Tempo Real</h3>
+          <p class="paragrafos-projetos">
+            Queries otimizadas no SQLAlchemy agregam os votos no banco de dados,
+            calculando a proporção de votos válidos. A lógica automatiza
+            critérios legais de desempate (NR-5), garantindo transparência no
+            painel.
+          </p>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="./img/emailcerto.png"
+            alt="Comprovante de voto por email"
+            class="projetos-imagem"
+          />
+          <h3 class="info-projetos">Microsserviço Assíncrono</h3>
+          <p class="paragrafos-projetos">
+            Implementação de disparo de e-mails usando smtplib e BackgroundTasks
+            do FastAPI. Garante o envio de comprovantes de voto sem bloquear a
+            resposta da API ou causar lentidão na interface do eleitor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatos" class="js-section">
+      <div class="contatos">
+        <div class="container">
+          <h2>Contatos</h2>
+          <div class="icons">
+            <div class="icon">
+              <a href="mailto:riquelme.braga93@gmail.com" target="_blank">
+                <div class="box">
+                  <img src="/contatos/mail.svg" alt="e-mail" />
+                </div>
+              </a>
+              <a href="mailto:riquelme.braga93@gmail.com" target="_blank"
+                ><p>E-mail</p></a
+              >
+              <a href="mailto:riquelme.braga93@gmail.com" target="_blank"
+                ><p>riquelmebraga93@gmail.com</p></a
+              >
+            </div>
+
+            <div class="icon">
+              <a
+                href="https://api.whatsapp.com/send?phone=5561981319618"
+                target="_blank"
+              >
+                <div class="box">
+                  <img src="/contatos/phone.svg" alt="telefone" />
+                </div>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=5561981319618"
+                target="_blank"
+                ><p>Telefone</p></a
+              >
+              <a
+                href="https://api.whatsapp.com/send?phone=5561981319618"
+                target="_blank"
+                ><p>(61) 98131-9618</p></a
+              >
+            </div>
+
+            <div class="icon">
+              <a
+                href="https://www.linkedin.com/in/riquelmebraga/"
+                target="_blank"
+              >
+                <div class="box">
+                  <img src="/contatos/linkedin.svg" alt="linkedin" />
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/riquelmebraga/"
+                target="_blank"
+                ><p>Linkedin</p></a
+              >
+              <a
+                href="https://www.linkedin.com/in/riquelmebraga/"
+                target="_blank"
+                ><p>@riquelmebraga</p></a
+              >
+            </div>
+
+            <div class="icon">
+              <a href="https://github.com/riquelme00" target="_blank">
+                <div class="box">
+                  <img src="/contatos/github.svg" alt="github" />
+                </div>
+              </a>
+              <a href="https://github.com/riquelme00" target="_blank"
+                ><p>Github</p></a
+              >
+              <a href="https://github.com/riquelme00" target="_blank"
+                ><p>@riquelme00</p></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+      <button class="close-modal">✕</button>
+      <img src="" alt="" class="modal-img" />
+      <h3 class="modal-title">Título do Projeto</h3>
+      <p class="modal-description">Descrição detalhada vai aparecer aqui.</p>
+      <div class="modal-links">
+        <a href="https://github.com/riquelme00" target="_blank"
+          >Ver no GitHub</a
+        >
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
